@@ -1,0 +1,54 @@
+package jdbcdemo;
+import java.util.*;
+
+public class input {
+	boolean num(String input)
+    {
+        try
+        {
+            Integer.parseInt(input);
+        }
+        catch(NumberFormatException ex)
+        {
+            return false;
+        }
+        return true;
+    }
+	
+	int nof, nor, block;
+	public input() {
+		String s="";
+		System.out.println("Welcome admin");
+		System.out.println("Please enter the number of floors");
+		Scanner in=new Scanner(System.in);
+		s=in.next();
+		if(num(s))
+		this.nof= Integer.parseInt(s);
+		else {
+			System.out.println("ENTER IN INTEGER FORMAT");
+			this.nof = in.nextInt();
+		}
+			
+		System.out.println("Please enter the number of blocks");
+		s=in.next();
+		if(num(s))
+		this.block= Integer.parseInt(s);
+		else {
+			System.out.println("ENTER IN INTEGER FORMAT AGAIN");
+			this.block=in.nextInt();
+		}
+		 
+		System.out.println("Please enter the number of rooms in a block");
+		s=in.next();
+		if(num(s))
+		this.nor= Integer.parseInt(s);
+		else {
+			System.out.println("ENTER IN INTEGER FORMAT AGAIN");
+			this.nor=in.nextInt();
+		}
+	
+
+		
+	}
+	
+}
